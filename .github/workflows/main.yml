@@ -26,11 +26,11 @@ jobs:
       # Step 3: Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -f QRCode_UI/Dockerfile -t MusayyabAli/my-app:${{ github.sha }} .
-          docker tag MusayyabAli/my-app:${{ github.sha }} MusayyabAli/my-app:latest
+          docker build -f QRCode_UI/Dockerfile -t musayyabali/my-app:${{ github.sha }} .
+          docker tag musayyabali/my-app:${{ github.sha }} musayyabali/my-app:latest
 
       # Step 4: Push the Docker image to Docker Hub
       - name: Push Docker image
         run: |
-          docker push MusayyabAli/my-app:${{ github.sha }}
-          docker push MusayyabAli/my-app:latest
+          docker push musayyabali/my-app:${{ github.sha }}
+          docker push musayyabali/my-app:latest
